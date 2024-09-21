@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none !important;
+}
+
+.form-control {
+    padding: 5px 100px 5px 5px !important;
+}
+
+img {
+    -webkit-user-drag: none; /* Для браузеров на основе WebKit (Chrome, Safari) */
+    user-select: none;
+}
+
+.no-select {
+    user-select: none;
+}
+
+.slider-container {
+    overflow-x: auto;
+    scrollbar-width: none;
+    white-space: nowrap;
+    cursor: grab;
+}
+
+.slider-container::-webkit-scrollbar {
+    display: none;
+}
+
+.catalog-card {
+    display: inline-block;
+    background: #fff;
+    padding: 20px;
+    border-radius: 20px;
+    margin-right: 10px;
+    width: auto;
+    height: 100%;
+}
