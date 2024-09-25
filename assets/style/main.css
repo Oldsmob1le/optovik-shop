@@ -8,6 +8,13 @@
     font-weight: 300;
 }
 
+.btn-primary {
+    background-color: #091D9E !important;
+    border: 0 !important;
+    padding: 9px 40px !important;
+    border-radius: 15px !important;
+}
+
 .form-control {
     padding: 5px 200px 5px 30px !important;
 }
@@ -56,4 +63,38 @@ a {
 
 .catalog-text {
     font-size: 1.2em;
+}
+.top-title {
+    max-width: 169px; /* Ширина контейнера */
+    white-space: normal; /* Перенос текста */
+    overflow: hidden; /* Обрезка текста */
+    text-overflow: ellipsis; /* Если не нужен перенос, а сокращение с '...' */
+}
+
+.like-bg {
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 1px 1px 1px 1px #DEDEDE;
+    border-radius: 10px;
+}
+
+.top-like p {
+    margin: 0;
+    color: #169B00;
+    font-size: 1.08em;
+}
+
+.top-price p {
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.top-price span {
+    text-decoration: line-through !important;
+    font-size: 0.9em;
+    margin-top: 5px;
+}
+
+.top-title {
+    font-size: 1.1em;
 }
