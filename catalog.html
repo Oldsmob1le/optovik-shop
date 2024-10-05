@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="assets/style/main.css" />
+    <link rel="stylesheet" href="assets/style/catalog.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Header Start -->
+
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-xxl">
+        <a class="navbar-brand" href="#">ОПТОВЫЙ №1</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Поиск"
+              aria-label="Search"
+            />
+          </ul>
+          <form class="d-flex">
+            <button class="btn btn-primary" type="submit">Каталог</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header End -->
+
+    <!-- Catalog -->
+
+    <section class="container-xxl">
+      <!-- Catalog title -->
+
+      <!-- Breadcrumbs -->
+
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Library</li>
+        </ol>
+      </nav>
+
+      <!-- Breadcrumbs End -->
+
+      <h1>Каталог</h1>
+
+      <!-- Верхняя панель с сортировкой и переключением вида -->
+      <div class="d-flex justify-content-between mb-4">
+        <div class="dropdown-center">
+          <button
+            class="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <img
+              src="assets/image/icons/filtercatalog.svg"
+              alt=""
+              class="me-2"
+            />
+            По популярности
+          </button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">По цене</a></li>
+            <li><a class="dropdown-item" href="#">По новизне</a></li>
+            <li><a class="dropdown-item" href="#">По рейтингу</a></li>
+          </ul>
+        </div>
+        <div class="btn-list d-flex align-items-center">
+          <button
+            class="btn filter-mode filter-mode-active me-2"
+            id="gridmode"
+            title="Сеточный вид"
+          >
+            <img src="assets/image/icons/gridmode.svg" alt="gridmode" />
+          </button>
+          <button class="btn filter-mode" id="listmode" title="Список">
+            <img src="assets/image/icons/catalog.svg" alt="listmode" />
+          </button>
+        </div>
+      </div>
+
+      <!-- Кнопка для показа фильтра на маленьких экранах -->
+      <button class="btn btn-primary filter-toggle-btn d-md-none mb-3">
+        Фильтр
+      </button>
+
+      <!-- Основная сетка с фильтрами и каталогом -->
+      <div class="row">
+        <!-- Фильтр слева -->
+        <div class="col-md-3">
+          <div
+            class="filter d-none d-md-flex flex-column gap-4 shadow p-3 mb-5 bg-white rounded"
+          >
+            <!-- Цена -->
+            <div class="price-block d-flex flex-column gap-3">
+              <p class="fw-bold">Цена, ₽</p>
+              <div class="price-controller d-flex align-items-center">
+                <input
+                  type="text"
+                  class="form-control min-price"
+                  placeholder="от 4 500 ₽"
+                />
+                <div class="price-line mx-2"></div>
+                <input
+                  type="text"
+                  class="form-control max-price"
+                  placeholder="до 300 500 ₽"
+                />
+              </div>
+            </div>
+
+            <!-- Встроенная память -->
+            <div class="d-flex flex-column gap-3">
+              <p class="fw-bold">Встроенная память</p>
+              <div class="filter-checkbox-list">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="512"
+                    id="memory512"
+                  />
+                  <label class="form-check-label" for="memory512">
+                    512 ГБ
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="256"
+                    id="memory256"
+                  />
+                  <label class="form-check-label" for="memory256">
+                    256 ГБ
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="128"
+                    id="memory128"
+                  />
+                  <label class="form-check-label" for="memory128">
+                    128 ГБ
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="64"
+                    id="memory64"
+                  />
+                  <label class="form-check-label" for="memory64"> 64 ГБ </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="32"
+                    id="memory32"
+                  />
+                  <label class="form-check-label" for="memory32"> 32 ГБ </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Оперативная память -->
+            <div class="d-flex flex-column gap-3">
+              <p class="fw-bold">Оперативная память</p>
+              <div class="filter-checkbox-list">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="1"
+                    id="ram1"
+                  />
+                  <label class="form-check-label" for="ram1"> 1 ГБ </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="1.5"
+                    id="ram1_5"
+                  />
+                  <label class="form-check-label" for="ram1_5"> 1.5 ГБ </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="2"
+                    id="ram2"
+                  />
+                  <label class="form-check-label" for="ram2"> 2 ГБ </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Бренд -->
+            <div class="d-flex flex-column gap-3">
+              <p class="fw-bold">Бренд</p>
+              <div class="filter-checkbox-list">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Apple"
+                    id="brandApple"
+                  />
+                  <label class="form-check-label" for="brandApple">
+                    Apple
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Honor"
+                    id="brandHonor"
+                  />
+                  <label class="form-check-label" for="brandHonor">
+                    Honor
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="Samsung"
+                    id="brandSamsung"
+                  />
+                  <label class="form-check-label" for="brandSamsung">
+                    Samsung
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Количество ядер -->
+            <div class="d-flex flex-column gap-3">
+              <p class="fw-bold">Количество ядер</p>
+              <div class="filter-checkbox-list">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="4"
+                    id="cores4"
+                  />
+                  <label class="form-check-label" for="cores4"> 4 </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="6"
+                    id="cores6"
+                  />
+                  <label class="form-check-label" for="cores6"> 6 </label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    value="8"
+                    id="cores8"
+                  />
+                  <label class="form-check-label" for="cores8"> 8 </label>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-outline-primary">
+              Применить
+            </button>
+          </div>
+        </div>
+
+        <!-- Каталог товаров справа -->
+        <div class="col-md-9">
+          <div id="catalog" class="row row-cols-4 g-4">
+            <!-- Карточка товара 1 -->
+            <div class="col">
+              <div class="main-card text-center">
+                <div class="top-bg">
+                  <div class="top-photo d-flex justify-content-center">
+                    <img
+                      src="assets/image/main-page/phone1.png"
+                      alt="Смартфон Apple iPhone 14 128GB"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <p class="top-title">Смартфон Apple iPhone 14 128GB</p>
+                  <div class="top-price d-flex gap-2 justify-content-center">
+                    <p>84 999 ₽</p>
+                    <span class="text-muted"><s>87 999 ₽</s></span>
+                  </div>
+                  <div
+                    class="top-like d-flex justify-content-center align-items-center gap-4"
+                  >
+                    <p class="text-success">В наличии</p>
+                    <div class="like-bg">
+                      <img
+                        src="assets/image/main-page/Vector.svg"
+                        alt="Добавить в избранное"
+                        class="img-fluid"
+                      />
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-primary mt-3">
+                    В корзину
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Карточка товара 2 -->
+            <div class="col">
+              <div class="main-card text-center">
+                <div class="top-bg">
+                  <div class="top-photo d-flex justify-content-center">
+                    <img
+                      src="assets/image/main-page/phone1.png"
+                      alt="Смартфон Apple iPhone 14 128GB"
+                      class="img-fluid"
+                    />
+                  </div>
+                  <p class="top-title">Смартфон Apple iPhone 14 128GB</p>
+                  <div class="top-price d-flex gap-2 justify-content-center">
+                    <p>84 999 ₽</p>
+                    <span class="text-muted"><s>87 999 ₽</s></span>
+                  </div>
+                  <div
+                    class="top-like d-flex justify-content-center align-items-center gap-4"
+                  >
+                    <p class="text-success">В наличии</p>
+                    <div class="like-bg">
+                      <img
+                        src="assets/image/main-page/Vector.svg"
+                        alt="Добавить в избранное"
+                        class="img-fluid"
+                      />
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-primary mt-3">
+                    В корзину
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Карточки -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Catalog End -->
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterBtnToGrid = document.querySelector("#gridmode");
+        const filterBtnToList = document.querySelector("#listmode");
+        const catalog = document.querySelector("#catalog");
+        const filterBtn = document.querySelector(".filter-toggle-btn");
+        const filterBlock = document.querySelector(".filter");
+
+        filterBtnToGrid.addEventListener("click", function () {
+          filterBtnToList.classList.remove("filter-mode-active");
+          filterBtnToGrid.classList.add("filter-mode-active");
+          catalog.classList.remove("row-cols-1");
+          catalog.classList.add("row-cols-4");
+        });
+
+        filterBtnToList.addEventListener("click", function () {
+          filterBtnToGrid.classList.remove("filter-mode-active");
+          filterBtnToList.classList.add("filter-mode-active");
+          catalog.classList.remove("row-cols-4");
+          catalog.classList.add("row-cols-1");
+        });
+
+        filterBtn.addEventListener("click", function () {
+          filterBlock.classList.toggle("d-none");
+          filterBlock.classList.toggle("d-md-flex");
+        });
+      });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

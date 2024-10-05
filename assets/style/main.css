@@ -12,12 +12,12 @@
     background-color: #091D9E !important;
     border: 0 !important;
     padding: 9px 40px !important;
-    border-radius: 15px !important;
+    border-radius: 10px !important;
 }
 
-.form-control {
+/* .form-control {
     padding: 5px 200px 5px 30px !important;
-}
+} */
 
 img {
     -webkit-user-drag: none;
