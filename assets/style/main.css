@@ -9,7 +9,7 @@
 }
 
 .btn-primary {
-    background-color: #091D9E !important;
+    background-color: #091d9ed0 !important;
     border: 0 !important;
     padding: 9px 40px !important;
     border-radius: 10px !important;
@@ -64,11 +64,16 @@ a {
 .catalog-text {
     font-size: 1.2em;
 }
+
 .top-title {
-    max-width: 169px; /* Ширина контейнера */
-    white-space: normal; /* Перенос текста */
-    overflow: hidden; /* Обрезка текста */
-    text-overflow: ellipsis; /* Если не нужен перенос, а сокращение с '...' */
+    max-width: 169px;
+    /* Ширина контейнера */
+    white-space: normal;
+    /* Перенос текста */
+    overflow: hidden;
+    /* Обрезка текста */
+    text-overflow: ellipsis;
+    /* Если не нужен перенос, а сокращение с '...' */
 }
 
 .like-bg {
@@ -97,4 +102,19 @@ a {
 
 .top-title {
     font-size: 1.1em;
+}
+
+/*  */
+
+.xs {
+    font-size: 0.7em;
+    margin-top: 5px;
+}
+
+.bg-sale {
+    background-color: rgba(53, 143, 50, 0.705) !important;
+}
+
+.search {
+    padding: 5px 200px 5px 30px !important;
 }
